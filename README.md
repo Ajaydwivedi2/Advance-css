@@ -946,3 +946,72 @@ These properties are useful for creating complex layouts when you want to contro
 - The hyphens CSS property specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
 
 ![App Screenshot](https://raw.githubusercontent.com/Ajaydwivedi2/Advance-css/master/column-count.png)
+
+////////////////////////////////////////////////////////////////// Last Part
+
+
+#. Explicit grid:- it's just the one that we defined  with the template rows and template columns,
+
+#. Implicit grid:-  if we span a grid item, and end up with more items than we have space for, then the grid algorithm will create a new line for the rest of the grid items. and that new line is called the implicit grid.
+#. We can have multiple grid items in the same shell.
+#. For spanning, we used basically three different ways.  
+#. First, we simply defined the end number of the row or the column line. 
+
+
+grid-row: 2 / 3;
+grid-column: 1 / 3;
+
+
+#. Then as a second way, we used the span keyword,  which is better.
+  
+grid-column: 1 / span 2;
+
+#. And then finally as a third method,  whenever we want to span until the end of our grid,  we can simply use minus one.
+
+grid-column: 1 / -1;
+
+#. There are multiple ways of positioning grid items in the grid.
+
+1. positioning grid items on the grid by using the automatically generated grid line number.
+2. positioning grid items on the grid by naming grid lines. (preferred for professional layouts)
+	a named set of grid lines.
+3. Name grid areas (preferred way to create grid layouts like- 3 * 3, 4 * 4
+
+#. the first part of the grid,  the part that we actually defined in our code is the explicit grid.  So it's this part here defined by these template rows and template columns,  okay, so these tracks that we added here.  And then the part that is automatically added in order to fit the content that doesn't fit in our explicit grid, CSS adds the implicit grid after that.
+
+#. align-items is defined to the container of the grid/flex-box, whereas align-self is defined on the items of the grid/flex-box and align-self overwrites the value of align-items for single grid/flex items on which it is defined.
+
+#. max-content() tries to make the column as wide as possible without having to cause any line breaks in the content.
+
+#.  what is the minmax() function?  Well, basically the minmax() function is just something that we pass two values in and then CSS ensures that the track will always stay between these two values.  So imagine that we pass into the minmax() function  100 pixels and 200 pixels for a column,  and so CSS grid will ensure that no matter what happens,
+
+#. what auto-fill here does is that it automatically creates as many tracks with the desired width that we specify here as fit into the container.
+
+#. We can use mix-content and max-content both on rows and columns.
+#. CSS Grid specification says that a fractional unit fills up the entire remaining space but it is never smaller than the minimum content of a row or a column.
+
+#. for the start command in npm, we don't need to write "npm run start"; we can omit "run" and write "npm start"
+
+"auto" and "main-content" both adopt the content-width. "auto" is the default value for a row when its height is not specified.
+
+#. when specifying the height of the grid rows we always try to adopt the content size. And to adapt the height of the content height we use "auto" / "min-width".
+
+#. So let's now think about the column tracks of this design.  So it's very common in web design to use a design grid,  with like eight or 12 or 16 predefined columns.  And so that's also what we're gonna do in here.  Now it may not really be necessary for this design,  but as I mentioned, grid systems like this one are widely used in web design.  So, for example, Bootstrap has a 12-column grid.  And many other design systems out there work the exact same way.  And so that's why I wanted to teach you here how we can use that as well.
+
+#. -1 in spanning grid cells only works with the explicit grid(rows/columns that we defined by code). not with the implicit grid(rows/columns that was created by the grid algorithm).
+
+#. when we want the rows to have the size of the content, then we don't define them, because defining auto/min-content/not-defining will result the same, means will take the height of the content. Or we can say, here content will define the rows.
+
+#. automatic placement algorithm.
+#. full-bleed section
+#. images have an intrinsic aspect ratio.
+
+#. object-fit property only works when you have defined both the height and width of the image
+#. object-fit is not used when the image is the direct child of the grid, but to use direct-fit on images, wrap the images in a div/create any parent element to img element and then use object-fit in their.
+
+#. Make the height equal of the logos(of different companies: like for the sponsors section), when implementing them on your site, that is how you can make them look equal.
+
+#. only text, and pseudo-elements can also be the grid items.
+
+#. When you have a grid layout and you want to change it with media queries for responsiveness, then use named columns and if wanna change your rows also with media queries then also name the rows. because if in media query you decided to change the you grid-layout like reducing one column or adding one column and if you are using number of columns then making changes in columns quantity changes the numbers of columns too, and in that case you have to change your columns definition.
+
